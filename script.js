@@ -24,3 +24,16 @@ in1.addEventListener("click", (event) => {
         in1.textContent = '_'
     }
 })
+in2.addEventListener("click", (event) => {
+    if (O === true){
+        in2.textContent = 'O'
+        X = true
+        O = false
+    } else if (X === true){
+        in2.textContent = 'X'
+        X = false
+        O = true
+    } else{
+        in2.textContent = '_'
+    }
+})
