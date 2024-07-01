@@ -12,12 +12,12 @@ let X = false
 let O = true
 
 in1.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in1.textContent === "-"){
         in1.textContent = 'O'
         in1.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in1.textContent === "-"){
         in1.textContent = 'X'
         in1.style.color = "red"
         X = false
@@ -25,12 +25,12 @@ in1.addEventListener("click", (event) => {
     }
 })
 in2.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in2.textContent === "-"){
         in2.textContent = 'O'
         in2.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in2.textContent === "-"){
         in2.textContent = 'X'
         in2.style.color = "red"
         X = false
@@ -38,12 +38,12 @@ in2.addEventListener("click", (event) => {
     }
 })
 in3.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in3.textContent === "-"){
         in3.textContent = 'O'
         in3.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in3.textContent === "-"){
         in3.textContent = 'X'
         in3.style.color = "red"
         X = false
@@ -51,12 +51,12 @@ in3.addEventListener("click", (event) => {
     }
 })
 in4.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in4.textContent === "-"){
         in4.textContent = 'O'
         in4.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in4.textContent === "-"){
         in4.textContent = 'X'
         in4.style.color = "red"
         X = false
@@ -64,12 +64,12 @@ in4.addEventListener("click", (event) => {
     }
 })
 in5.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in5.textContent === "-"){
         in5.textContent = 'O'
         in5.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in5.textContent === "-"){
         in5.textContent = 'X'
         in5.style.color = "red"
         X = false
@@ -77,12 +77,12 @@ in5.addEventListener("click", (event) => {
     }
 })
 in6.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in6.textContent === "-"){
         in6.textContent = 'O'
         in6.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in6.textContent === "-"){
         in6.textContent = 'X'
         in6.style.color = "red"
         X = false
@@ -90,12 +90,12 @@ in6.addEventListener("click", (event) => {
     }
 })
 in7.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in7.textContent === "-"){
         in7.textContent = 'O'
         in7.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in7.textContent === "-"){
         in7.textContent = 'X'
         in7.style.color = "red"
         X = false
@@ -103,12 +103,12 @@ in7.addEventListener("click", (event) => {
     }
 })
 in8.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in8.textContent === "-"){
         in8.textContent = 'O'
         in8.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in8.textContent === "-"){
         in8.textContent = 'X'
         in8.style.color = "red"
         X = false
@@ -116,12 +116,12 @@ in8.addEventListener("click", (event) => {
     }
 })
 in9.addEventListener("click", (event) => {
-    if (O === true){
+    if (O === true && in9.textContent === "-"){
         in9.textContent = 'O'
         in9.style.color = "blue"
         X = true
         O = false
-    } else if (X === true){
+    } else if (X === true && in9.textContent === "-"){
         in9.textContent = 'X'
         in9.style.color = "red"
         X = false
@@ -129,8 +129,28 @@ in9.addEventListener("click", (event) => {
     }
 })
 
-if(in1.textContent === "O" && in2.textContent === "O" && in3.textContent === "O"){
-    X = false
-    O = false
-    console.log("O win")
-}
+document.addEventListener("click", (event) => {
+    if(in1.textContent === "O" && in2.textContent === "O" && in3.textContent === "O"){
+        console.log("O win")
+        X = true
+        O = true   
+        in1.textContent = "-"
+        in2.textContent = "-"
+        in3.textContent = "-"
+        in4.textContent = "-"
+        in5.textContent = "-"
+        in6.textContent = "-"
+        in7.textContent = "-"
+        in8.textContent = "-"
+        in9.textContent = "-"
+        in1.style.color = "white"
+        in2.style.color = "white"
+        in3.style.color = "white"
+        in4.style.color = "white"
+        in5.style.color = "white"
+        in6.style.color = "white"
+        in7.style.color = "white"
+        in8.style.color = "white"
+        in9.style.color = "white"
+    }
+})
