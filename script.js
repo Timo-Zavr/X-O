@@ -20,8 +20,6 @@ in1.addEventListener("click", (event) => {
         in1.textContent = 'X'
         X = false
         O = true
-    } else{
-        in1.textContent = '_'
     }
 })
 in2.addEventListener("click", (event) => {
@@ -33,7 +31,5 @@ in2.addEventListener("click", (event) => {
         in2.textContent = 'X'
         X = false
         O = true
-    } else{
-        in2.textContent = '_'
     }
 })
