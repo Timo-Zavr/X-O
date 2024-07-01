@@ -17,6 +17,8 @@ body {
     z-index: 1;
 }
 button{
+    color: white;
+    background-color: white;
     width: 140px;
     font-size: 100px;
 }
