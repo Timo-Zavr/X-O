@@ -3,24 +3,31 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-image: url(./фон.jpg);
+    background-size: cover;
+    background-color: rgb(57, 72, 30);
+    background-repeat: no-repeat;
 }
 
 .board {
     color: white;
     width: 500px;
-    height: 100px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-size: 10px;
-    z-index: 1;
+    z-index: 0;
 }
-button{
-    color: white;
-    background-color: white;
-    width: 140px;
-    font-size: 100px;
+#a, #b, #c, #d, #e, #f, #g, #h, #i {
+    color: rgb(25, 49, 33);
+    background-color: rgb(25, 49, 33);
+    border: 10px solid rgb(39, 77, 17);
+    border-radius: 40px;
+    width: 125px;
+    height: 125px;
+    font-size: 75px;
+    font-weight: 700;
 }
 
 body {
@@ -29,4 +36,60 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.winer{
+    position: fixed;
+    margin-top: -100px;
+    margin-left: -700px;
+    width: 300px;
+    height: 10px;
+    font-size: 100px;
+    color: rgb(113, 145, 32);
+    display: none;
+    z-index: 3;
+}
+.start{
+    position: fixed;
+    margin-top: -100px;
+    margin-left: 600px;
+    width: 50px;
+    height: 10px;
+    font-size: 100px;
+    color: rgb(113, 145, 32);
+    display: none;
+    z-index: 3;
+}
+
+@media (max-width: 1000px){
+    .board{
+        width: 230px;
+        height: 230px;
+    }
+    .winer{
+        font-size: 70px;
+        margin-left: -500px;
+        margin-top: -80px;
+    }
+    .start{
+        font-size: 70px;
+        margin-left: 550px;
+        margin-top: -70px;
+    }
+}
+@media (max-width: 500px){
+    .board{
+        width: 220px;
+        height: 220px;
+    }
+    .winer{
+        font-size: 70px;
+        margin-left: 100px;
+        margin-top: -700px;
+    }
+    .start{
+        font-size: 70px;
+        margin-left: -40px;
+        margin-top: 550px;
+    }
 }
