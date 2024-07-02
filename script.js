@@ -9,6 +9,7 @@ const in8 = document.querySelector("#h")
 const in9 = document.querySelector("#i")
 const winer = document.querySelector(".winer")
 const start = document.querySelector(".start")
+const S = document.querySelector(".S")
 
 let X = false
 let O = true
@@ -159,6 +160,52 @@ document.addEventListener("click", (event) => {
         start.style.display = "block"
         X = false
         O = false
+    } 
+    if (   in1.textContent === "O" && in2.textContent === "O" && in3.textContent === "X"
+        && in4.textContent === "X" && in5.textContent === "X" && in6.textContent === "O"
+        && in7.textContent === "O" && in8.textContent === "O" && in9.textContent === "X"
+        || in1.textContent === "X" && in2.textContent === "O" && in3.textContent === "O"
+        && in4.textContent === "O" && in5.textContent === "X" && in6.textContent === "X"
+        && in7.textContent === "X" && in8.textContent === "O" && in9.textContent === "O"
+
+        || in1.textContent === "X" && in2.textContent === "O" && in3.textContent === "X"
+        && in4.textContent === "O" && in5.textContent === "X" && in6.textContent === "O"
+        && in7.textContent === "O" && in8.textContent === "X" && in9.textContent === "O"
+        || in1.textContent === "O" && in2.textContent === "X" && in3.textContent === "O"
+        && in4.textContent === "O" && in5.textContent === "X" && in6.textContent === "O"
+        && in7.textContent === "X" && in8.textContent === "O" && in9.textContent === "X"
+
+        || in1.textContent === "O" && in2.textContent === "X" && in3.textContent === "O"
+        && in4.textContent === "X" && in5.textContent === "X" && in6.textContent === "O"
+        && in7.textContent === "O" && in8.textContent === "O" && in9.textContent === "X"
+        || in1.textContent === "O" && in2.textContent === "O" && in3.textContent === "X"
+        && in4.textContent === "X" && in5.textContent === "X" && in6.textContent === "O"
+        && in7.textContent === "O" && in8.textContent === "X" && in9.textContent === "O"
+        || in1.textContent === "O" && in2.textContent === "X" && in3.textContent === "O"
+        && in4.textContent === "O" && in5.textContent === "X" && in6.textContent === "X"
+        && in7.textContent === "X" && in8.textContent === "O" && in9.textContent === "O"
+        || in1.textContent === "X" && in2.textContent === "O" && in3.textContent === "O"
+        && in4.textContent === "O" && in5.textContent === "X" && in6.textContent === "X"
+        && in7.textContent === "O" && in8.textContent === "X" && in9.textContent === "O"
+
+        || in1.textContent === "X" && in2.textContent === "O" && in3.textContent === "X"
+        && in4.textContent === "O" && in5.textContent === "O" && in6.textContent === "X"
+        && in7.textContent === "X" && in8.textContent === "X" && in9.textContent === "O"
+        || in1.textContent === "X" && in2.textContent === "X" && in3.textContent === "O"
+        && in4.textContent === "O" && in5.textContent === "O" && in6.textContent === "X"
+        && in7.textContent === "X" && in8.textContent === "O" && in9.textContent === "X"
+        || in1.textContent === "X" && in2.textContent === "O" && in3.textContent === "X"
+        && in4.textContent === "X" && in5.textContent === "O" && in6.textContent === "O"
+        && in7.textContent === "O" && in8.textContent === "X" && in9.textContent === "X"
+        || in1.textContent === "O" && in2.textContent === "X" && in3.textContent === "X"
+        && in4.textContent === "X" && in5.textContent === "O" && in6.textContent === "O"
+        && in7.textContent === "X" && in8.textContent === "O" && in9.textContent === "X"
+        ){
+        winer.textContent = "Draw"
+        winer.style.display = "block"
+        start.style.display = "block"
+        X = false
+        O = false
     }
 })
 start.addEventListener("click", (event) => {
@@ -198,7 +245,7 @@ function fs(){
         document.exitFullscreen()
     }
 }
-document.addEventListener('', (event) => {
+S.addEventListener('click', (event) => {
     if (!document.fullscreenElement){
         document.documentElement.requestFullscreen()
     } else if (document.exitFullscreen){
