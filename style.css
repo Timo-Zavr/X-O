@@ -71,8 +71,14 @@ body {
     color: rgb(113, 145, 32);
     display: none;
     z-index: 3;
+    cursor: pointer;
+    transition: 0.5s;
 }
-
+@media (hover:hover){
+    .start:hover{
+        color: rgb(51, 61, 25);
+    }
+}
 @media (max-width: 1000px){
     .board{
         width: 150px;
